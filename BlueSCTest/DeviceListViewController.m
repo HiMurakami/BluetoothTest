@@ -7,7 +7,7 @@
 //
 
 #import "DeviceListViewController.h"
-
+#import "DeviceDetailViewController.h"
 @interface DeviceListViewController ()
 
 @end
@@ -128,6 +128,17 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    if ([segue.identifier isEqualToString:@"ShowPeripheralDetail"])
+    {
+        DeviceDetailViewController *destination = (DeviceDetailViewController *)segue.destinationViewController;
+        destination.targetPeripheral = self.blueC.discoverdPeripherals[indexPath.row];
+        destination.blueC = self.blueC;
+    }
 }
 
 - (IBAction)cancel:(id)sender

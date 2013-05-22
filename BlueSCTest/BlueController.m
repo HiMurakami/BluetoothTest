@@ -166,26 +166,20 @@
     if ([localName hasPrefix:@"Wahoo BlueSC"]){
         if ([Setting instance].targetBlueSC_UUID){
             CBUUID *targetUUID = [CBUUID UUIDWithString:[Setting instance].targetBlueSC_UUID];
-            if(p.UUID == nil || ! [[CBUUID UUIDWithCFUUID:p.UUID].data isEqualToData:targetUUID.data]){
+            if([[CBUUID UUIDWithCFUUID:p.UUID].data isEqualToData:targetUUID.data]){
                 [self connect:p];
                 NSLog(@"接続開始 - BlueSC");
             }
-        }else{
-            [self connect:p];
-            NSLog(@"接続開始 - Unknown BlueSC");
         }
     }
     
     if ([localName hasPrefix:@"Wahoo HRM"]){
         if ([Setting instance].targetBlueHR_UUID){
             CBUUID *targetUUID = [CBUUID UUIDWithString:[Setting instance].targetBlueHR_UUID];
-            if(p.UUID == nil || ! [[CBUUID UUIDWithCFUUID:p.UUID].data isEqualToData:targetUUID.data]){
+            if([[CBUUID UUIDWithCFUUID:p.UUID].data isEqualToData:targetUUID.data]){
                 [self connect:p];
                 NSLog(@"接続開始 - BlueHR");
             }
-        }else{
-            [self connect:p];
-            NSLog(@"接続開始 - Unknown BlueHR");
         }
     }
 }
@@ -229,6 +223,11 @@ didDisconnectPeripheral:(CBPeripheral *)peripheral
                                         _cscMesureCharacteristicsUUID,
                                         nil]
                             forService:service];
+            // 接続先を記憶
+            NSString *uuidString = CFBridgingRelease(CFUUIDCreateString(NULL, p.UUID));
+            [Setting instance].targetBlueSC_UUID = uuidString;
+            NSLog(@"blueSC 覚えたUUID%@",uuidString);
+            
         }
         
         // HR
@@ -237,6 +236,10 @@ didDisconnectPeripheral:(CBPeripheral *)peripheral
                                         _hrMesureCharactaristicsUUID,
                                         nil]
                             forService:service];
+            // 接続先を記憶
+            NSString *uuidString = CFBridgingRelease(CFUUIDCreateString(NULL, p.UUID));
+            [Setting instance].targetBlueHR_UUID = uuidString;
+            NSLog(@"blueHR 覚えたUUID%@",uuidString);
         }
     }
 }

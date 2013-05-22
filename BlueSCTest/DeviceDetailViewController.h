@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 #import "BlueController.h"
 @interface DeviceDetailViewController : UIViewController
 @property (nonatomic) BlueController *blueC;
+@property (nonatomic) CBPeripheral *targetPeripheral;
+
 - (IBAction)connect:(id)sender;
 @end

@@ -36,7 +36,6 @@
 }
 
 - (IBAction)connect:(id)sender {
-    
-    
+    [self.blueC connect:self.targetPeripheral];
 }
 @end
