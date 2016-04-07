@@ -9,6 +9,3 @@ Wahoo FitnessのBlueSC、BlueHRと接続するサンプル
 
 データの構造やService、Characteristicsは [ここ](http://developer.bluetooth.org/gatt/services/Pages/ServicesHome.aspx) とか [ここ](http://developer.bluetooth.org/gatt/services/Pages/ServiceViewer.aspx?u=org.bluetooth.service.cycling_speed_and_cadence.xml)に詳細がある。
 
-例えばBlueSCのスピードケイデンスのキャラクタリスティクスはこんな感じ
-
-[CSC Measurement](http://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.csc_measurement.xml)

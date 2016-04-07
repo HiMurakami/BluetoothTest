@@ -1,10 +1,3 @@
-//
-//  DeviceDetailViewController.m
-//  BlueSCTest
-//
-//  Created by junpeiwada on 2013/05/21.
-//  Copyright (c) 2013年 soneru. All rights reserved.
-//
 
 #import "DeviceDetailViewController.h"
 
@@ -36,6 +29,7 @@
 }
 
 - (IBAction)connect:(id)sender {
-    [self.blueC connect:self.targetPeripheral];
+    
+    
 }
 @end

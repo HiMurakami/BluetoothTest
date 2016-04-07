@@ -1,11 +1,3 @@
-//
-//  BlueController.h
-//  BlueSCTest
-//
-//  Created by junpeiwada on 2013/05/20.
-//  Copyright (c) 2013年 soneru. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 

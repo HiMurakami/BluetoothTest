@@ -1,11 +1,3 @@
-//
-//  ViewController.m
-//  BlueSCTest
-//
-//  Created by junpeiwada on 2013/05/20.
-//  Copyright (c) 2013年 soneru. All rights reserved.
-//
-
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import "DeviceListViewController.h"

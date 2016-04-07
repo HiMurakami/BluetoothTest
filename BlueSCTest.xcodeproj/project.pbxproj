@@ -159,6 +159,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = soneru;
+				TargetAttributes = {
+					EE2378ED1749FD3F0000E5EF = {
+						DevelopmentTeam = KYEU493W95;
+					};
+				};
 			};
 			buildConfigurationList = EE2378E91749FD3F0000E5EF /* Build configuration list for PBXProject "BlueSCTest" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -288,9 +293,12 @@
 		EE2379121749FD3F0000E5EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlueSCTest/BlueSCTest-Prefix.pch";
 				INFOPLIST_FILE = "BlueSCTest/BlueSCTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hmurakami;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -299,9 +307,12 @@
 		EE2379131749FD3F0000E5EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlueSCTest/BlueSCTest-Prefix.pch";
 				INFOPLIST_FILE = "BlueSCTest/BlueSCTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hmurakami;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -326,6 +337,7 @@
 				EE2379131749FD3F0000E5EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
